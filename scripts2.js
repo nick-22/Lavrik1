@@ -1,17 +1,20 @@
 
-var a = prompt('Введите "a"', 'a=');
-var b = prompt('Введите "b"', 'b=');
-var c = prompt('Введите "c"', 'c=');
+var a = +prompt('Введите "a"', 'a=');
+var b = +prompt('Введите "b"', 'b=');
+var c = +prompt('Введите "c"', 'c=');
+var res;
 
-if (a < b && a > c || a > b && a < c) {
-    alert (a);
+if ((a < b) && (a > c) || (a > b) && (a < c)) {
+    res = a;
 }
-else if (b < a && b > c || b > a && b < c) {
-    alert(b);
+else if ((b < a) && (b > c) || (b > a) && (b < c)) {
+    res = b;
 }
-else if (a == b || a == c || b == c) {
+else if ((a == b) || (a == c) || (b == c)) {
     alert('Числа не должны быть равны');
 }
 else {
-    alert(c);
+    res = c;
 }
+
+alert(res);
